@@ -122,6 +122,7 @@ p {
 global styles
 --------------------------------------------- 
 */
+
 html,
 body {
   background: #fff;
@@ -285,6 +286,7 @@ z-index: 9999;
     width: 100px;
     height: 100px;
     margin-left: 85px;
+    
 }
 
 /* 
@@ -292,7 +294,6 @@ z-index: 9999;
 header
 --------------------------------------------- 
 */
-
 .background-header {
   background: rgba(250,250,250,0.99) !important;
   height: 80px!important;
@@ -344,6 +345,7 @@ header
 }
 
 .header-area .main-nav .logo {
+    padding-left: 60px;
   line-height: 80px;
   color: #fff;
   font-size: 32px;
@@ -578,6 +580,7 @@ banner
 
 .main-banner {
   position: relative;
+    max-height: 100vh;
 }
 
 #bg-video {
@@ -601,6 +604,8 @@ banner
     left: 0;
     bottom: 0px;
     width: 100%;
+    max-height: 100vh;
+   box-shadow: 0px 10px 15px rgba(0,0,0,0.6);
 }
 
 .main-banner .caption {
@@ -684,9 +689,10 @@ features
     padding: 30px 0 0 0;
 }
 
-.headline{
+.headline {
     position:relative;
     left: 110%;
+   
 }
 
 /*
@@ -732,8 +738,13 @@ Our Classes
 */
 
 #our-classes {
-  padding-bottom:  230px;
     margin-bottom: 0px;
+    min-width: 100%; 
+    min-height: 100vh; 
+    max-width: 100%; 
+    max-height: 100vh; 
+    object-fit: cover;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.6);
 }
 
 #tabs ul {
@@ -931,6 +942,8 @@ trainers
 */
 
 #trainers .trainer-item {
+    height: 300px;
+    overflow: auto;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
@@ -950,7 +963,16 @@ trainers
   margin-top: 25px;
   margin-bottom: 10px;
 }
-
+.project {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100vh;
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.6);
+}
 #trainers .trainer-item h4 {
   font-size: 19px;
   font-weight: 600;
@@ -1493,3 +1515,12 @@ responsive
         padding: 50px 0 50px 0;
     }
 }
+.headline{
+    color: black;
+}
+@media (max-width: 500px){
+    .header-area .main-nav .logo{
+        padding-left: 0px;
+    }
+}
+    
